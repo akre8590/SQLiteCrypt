@@ -14,15 +14,4 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"/>
 
-    <Button
-        android:visibility="invisible"
-        android:id="@+id/btnCryp"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnDB"
-        android:layout_centerHorizontal="true"
-        android:text="Encriptar BD"
-        />
-
 </RelativeLayout>

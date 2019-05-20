@@ -14,16 +14,14 @@ import java.io.File;
 public class MyTaskCrypt extends AsyncTask<Void, Void, Void> {
 
      SQLiteDatabase db;
-     org.sqlite.database.sqlite.SQLiteDatabase db1;
 
 
-     File path =  new File("/storage/emulated/0/test.db3");
+     File path =  new File("/storage/emulated/0/test2.db3");
      Context context;
      ProgressDialog progress;
      private long time;
 
-
-    public MyTaskCrypt(Context context, ProgressDialog progress){
+     public MyTaskCrypt(Context context, ProgressDialog progress){
         this.context = context;
         this.progress = progress;
     }
@@ -38,7 +36,6 @@ public class MyTaskCrypt extends AsyncTask<Void, Void, Void> {
     protected Void doInBackground(Void... voids) {
 
         //createDataBase();
-
         /**db1 = org.sqlite.database.sqlite.SQLiteDatabase.openOrCreateDatabase(path,null);
         db1.execSQL("PRAGMA rehexkey = 'secretkey'");
         db1.close();**/
@@ -63,7 +60,7 @@ public class MyTaskCrypt extends AsyncTask<Void, Void, Void> {
     private void cryptDataBase(){
         //SQLiteDatabase db;
         db = SQLiteDatabase.openOrCreateDatabase(path,"", null);
-        db.changePassword(context.getString(R.string.cadena));
+        db.changePassword("abc123");
         db.close();
     }
 }
